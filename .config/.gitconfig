@@ -1,0 +1,21 @@
+[alias]
+	commits = log --color --graph --pretty=format:'%Cred%h%Creset - %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	stats = diff --stat
+
+[color]
+	diff = auto
+	status = auto
+	interactive = auto
+	ui = true
+	pager = true
+
+[commit]
+	gpgsign = true
+
+[core]
+	editor = vim
+
+[user]
+	name = kozmer 
+	email = kozmer@kozmer.me 
+	signingkey = C49EA842747166B3

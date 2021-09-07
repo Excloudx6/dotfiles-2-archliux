@@ -1,0 +1,44 @@
+command! Format execute 'lua vim.lsp.buf.formatting()'
+"Bindings
+inoremap jj <Esc>
+vnoremap <C-c> "*y :let @+=@*<CR>
+map <silent> <F5> : NERDTreeToggle<CR>
+nnoremap <silent> <space> za
+
+"Coding
+nnoremap <silent> <C-f> :Format<CR>
+"fix! idea: use a function that returns bin path
+"Floaterm
+nnoremap <silent> <C-n> :FloatermNew nnn<CR>
+nnoremap <silent> <C-t> :FloatermNew<CR>
+
+"fzf
+nnoremap <C-s> :Files <CR>
+nnoremap <C-a> :Files $HOME<CR>
+nnoremap <C-w> :Lines <CR>
+
+"Better tabbing
+vnoremap < <gv
+vnoremap > >gv
+
+"Better window navigation
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+"Use alt + hjkl to resize windows, r to swap buffers
+nnoremap <M-j>    :resize -5<CR>
+nnoremap <M-k>    :resize +5<CR>
+nnoremap <M-h>    :vertical resize -5<CR>
+nnoremap <M-l>    :vertical resize +5<CR>
+nnoremap <M-r>    :wincmd r<CR>
+
+"snippet mappings
+imap <C-k>     <Plug>(neosnippet_expand_or_jump)
+smap <C-k>     <Plug>(neosnippet_expand_or_jump)
+xmap <C-k>     <Plug>(neosnippet_expand_target)
+
+"completion nav
+inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
