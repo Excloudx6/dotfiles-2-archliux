@@ -1,0 +1,17 @@
+#!/bin/sh
+
+feh --bg-fill ~/Pictures/anime/blue-red-blue-blond.png &
+
+#xrdb merge ~/Public/xresources/nord/.Xresources &
+
+xautolock -time 10 -locker slock &
+
+picom & 
+
+xbacklight -set 100 &
+
+setxkbmap gb
+
+~/.dwm/bar &
+
+dwm
