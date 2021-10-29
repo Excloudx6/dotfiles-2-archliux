@@ -2,16 +2,15 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/crispy/.config/zsh/.oh-my-zsh"
+export ZSH="/home/crisp/.config/zsh/.oh-my-zsh"
 
 export VISUAL=nvim
 export EDITOR="$VISUAL"
 export SUDO_EDITOR=/usr/bin/nvim
-export MPD_HOST=$HOME/.config/mpd/socket
 
 [[ $TMUX = "" ]] && export TERM="st-256color"
 
-ZSH_THEME="aussiegeek"
+ZSH_THEME="dracula"
 
 # Plugins
 plugins=(git zsh-syntax-highlighting k vi-mode)
@@ -40,28 +39,29 @@ alias tkill="tmux kill-session"
 alias zshr="source ~/.config/zsh/.zshrc"
 alias e="exit"
 alias c="clear"
-alias cat="ccat"
-alias ytm='youtube-dl --extract-audio --audio-format mp3 --audio-quality 0 -o "%(title)s.%(ext)s" --no-cache-dir --no-call-home'
-alias pipuser='pip install --user'
+alias cat="bat"
+alias pipuser='python3 -m pip install --user'
 alias v='nvim'
-alias discfetch="fetchcord --nodistro --nohardware --nohost &"
-alias google='googler -n 5 -x --np --colors=nodgiy'
-alias ddgr='ddgr -n 5 -x --np --colors=nodgiy'
 alias listening='netstat -tunlp'
+alias ghidra='/./home/crisp/tools/ghidra/ghidraRun'
+alias ls='exa -l --color=always --group-directories-first'
+alias ll='exa -laHhg --color=always --group-directories-first'
+alias la='exa --color=always --group-directories-first'
 
-alias load="killall st"
-alias use="xrdb merge"
+#alias load="killall st"
+#alias use="xrdb merge"
 
 ### Lang
-export LC_ALL=en_GB.UTF-8
-export LANG=en_GB.UTF-8
-export LANGUAGE=en_GB.UTF-8
+#export LC_ALL=en_GB.UTF-8
+#export LANG=en_GB.UTF-8
+#export LANGUAGE=en_GB.UTF-8
 export GPG_TTY=$(tty)
 
 ### Paths
 export PATH="$HOME/scripts:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-export BROWSER=/usr/bin/firefox-bin
+export PATH="$HOME/.local/share/cargo/bin:$PATH"
+export BROWSER=/usr/bin/firefox
 export GOPATH=$HOME/.go
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 
