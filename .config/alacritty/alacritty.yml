@@ -2,7 +2,8 @@
 colors:
   # Default colors
   primary:
-    background: '#10100E'
+    #background: '#10100E'
+    background: '#000005'
     foreground: '#C6C6C4'
 
   # Normal colors
@@ -31,6 +32,6 @@ font:
   normal:
     family: Hack Nerd Font Mono
     size: 8
-    
+
 window:
-  opacity: 0.970
+  opacity: 0.75
