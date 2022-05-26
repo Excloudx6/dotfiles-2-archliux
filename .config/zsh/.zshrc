@@ -90,4 +90,5 @@ alias v='vim'
 alias listening='netstat -tunlp'
 alias k='k -h'
 
+export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:$HOME/.spicetify"
