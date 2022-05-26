@@ -1,10 +1,11 @@
 export ZSH="$HOME/.oh-my-zsh"
 
 #ZSH_THEME="ys"
-ZSH_THEME="fino"
+#ZSH_THEME="fino"
 #ZSH_THEME="xiong-chiamiov-plus"
 #ZSH_THEME="aussiegeek"
 #ZSH_THEME="candy"
+ZSH_THEME="kphoen"
 #ZSH_THEME="darkblood"
 
 plugins=(git zsh-syntax-highlighting zsh-autosuggestions k vi-mode)
@@ -87,16 +88,6 @@ alias c="clear"
 alias pipuser='python3 -m pip install --user'
 alias v='vim'
 alias listening='netstat -tunlp'
-alias obsidian='flatpak run md.obsidian.Obsidian'
 alias k='k -h'
 
-export PATH="$HOME/.local/bin:$PATH"
-export GPG_TTY=$(tty)
-
-if [ ! -S ~/.ssh/ssh_auth_sock ]; then
-    eval `ssh-agent`
-      ln -sf "$SSH_AUTH_SOCK" ~/.ssh/ssh_auth_sock
-fi
-export SSH_AUTH_SOCK=~/.ssh/ssh_auth_sock
-ssh-add -l > /dev/null || ssh-add ~/.ssh/github/key
 export PATH="$PATH:$HOME/.spicetify"
